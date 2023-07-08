@@ -47,7 +47,7 @@ function LoginScreen({navigation}) {
             <Text style={styles.title}>Log in</Text>
             
             <Formik
-                initialValues=  {{ email:'2@2', password: 'qweasd', }}
+                initialValues=  {{ email:'', password: '', }}
                 onSubmit = { async (values, {resetForm}) => {
                     if(await validateUser(values)){ 
                         await createInstance(values.email);
