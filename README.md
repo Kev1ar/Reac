@@ -1,18 +1,18 @@
-# Reach
+# Reach Charity Applications
 
 This project is built using React Native and Expo as a mini-project that started from a university assignment. I expanded upon the inital assignment specifications after being unsatisfied with my final submission product. 
 
-
-Primary Test Devices
+## Primary Test Devices
 Both devices used are on the smaller side.
 	-	Android Pixel 4 API 29
 	-	iPhone 11
-Colors
+ 
+## Colors
 Palette was generated from here:	
 https://coolors.co/394053-4e4a59-6e6362-839073-7cae7a
 Open AppColours.js under [Reach/app/config/AppColours.js] to view the specific color configurations.
 
-Dependencies List
+## Dependencies List
 	+-- @babel/core@7.21.8
 	+-- @react-native-async-storage/async-storage@1.17.11
 	+-- @react-navigation/bottom-tabs@6.5.7
@@ -29,18 +29,23 @@ Dependencies List
 	+-- react-native-uuid@2.0.1
 	`-- yup@1.1.1
 
-User Data Structure
+## User Data Structure
 The project uses react native async-storage to store user data locally. The example object below defines the intended structure user data is stored and used in the application. Detailed configuration found in [Reach/app/config/ConfigData.js].
 
-const EXAMPLE_USER_INFO = {
-    userId: '1',
-    email: 'email@gmail.com',
-    password: '123456',
-    firstName: 'Jogh',
-    lastName: 'Chest',
-    phoneNumber: '1234567890',
-    country: 'Australia',
-    profilePicture: '',
-    charityList: [
-    ], 
-}
+### Example User Case
+	const EXAMPLE_USER_INFO = {
+		userId: '1',
+		email: 'email@gmail.com',
+		password: '123456',
+		firstName: 'Jogh',
+		lastName: 'Chest',
+		phoneNumber: '1234567890',
+		country: 'Australia',
+		profilePicture: '',
+		charityList: [
+		], 
+	}
+
+# todo
+
+screenshots, video, how-to open
