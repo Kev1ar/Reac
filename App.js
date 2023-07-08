@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from 'expo-font';
+
+import { NavigationContainer } from '@react-navigation/native';
+import AuthNavigator from './app/navigation/AuthNavigator';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 
 export default function App() {
+  const [loaded] = useFonts({
+    'Lato': require('./app/assets/fonts/Lato-Regular.ttf'),
+    'Lato-Bold': require('./app/assets/fonts/Lato-Bold.ttf'),
+    'Montserrat': require('./app/assets/fonts/Montserrat-Regular.ttf'),
+    'Montserrat-Bold': require('./app/assets/fonts/Montserrat-Bold.ttf'),
+  });
+  if (!loaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <AuthNavigator/>
+      </NavigationContainer>
+     </SafeAreaProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
